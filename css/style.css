@@ -1,0 +1,7 @@
+.button-design{
+    background-color: white;
+}
+.button-design:hover{
+background-color: black;
+color: white;
+}
