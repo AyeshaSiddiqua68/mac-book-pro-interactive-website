@@ -54,15 +54,15 @@ function updateTotalCost(memory, storage, shippingCost) {
     const displayTotalCost = document.getElementById('display-total-cost');
     displayTotalCost.innerText = totalCost;
 
-    document.getElementById('promo-code-button').addEventListener('click', function () {
-        const promoCodeInput = document.getElementById('promo-code-input').value;
-        if (promoCodeInput == 'stevekaku') {
-            const displayTotalCost = document.getElementById('display-total-cost');
-            displayTotalCost.innerText = parseFloat(totalCost - (totalCost * .2));
 
-        }
+    //bonus Part-2(Applying Promo Code for 20% discount)
+    promoCode = document.getElementById('promo-input-field').value;
+    if (promoCode == 'stevekaku') {
+        const discountAmount = parseFloat(totalPrice.innerText) * .20;
+        const afterDiscountTotalCost = totalPrice.innerText - parseFloat(discountAmount);
+        displayTotalCost.innerText = afterDiscountTotalCost;
+    }
 
-    })
 }
 // addition of event handeler on memory size button
 document.getElementById('memory-size').addEventListener('click', function () {
@@ -98,6 +98,14 @@ document.getElementById('charged-shipping').addEventListener('click', function (
     updateTotalCost('withPayment');
 
 });
+
+//addition of event handeler on promo code button
+document.getElementById('promo-code-button').addEventListener('click', function () {
+
+    updateTotalCost('stevekaku');
+    document.getElementById('promo-input-field').value = '';
+});
+
 
 
 
