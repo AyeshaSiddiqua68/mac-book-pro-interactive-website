@@ -9,7 +9,6 @@ function getUpdateMemoryCost(isMemorySize) {
     }
     return memoryPrice;
 }
-
 //function to get updated storage cost
 function getUpdateStorageCost(isStorageSize) {
     const storagePrice = document.getElementById('storage-price');
@@ -23,7 +22,6 @@ function getUpdateStorageCost(isStorageSize) {
         storagePrice.innerText = '180';
     }
     return storagePrice;
-
 }
 //function to get updated delivery cost
 function getUpdateDeliveryCost(isDeliveryCharge) {
@@ -49,12 +47,9 @@ function updateTotalCost(memory, storage, shippingCost) {
     const totalPrice = document.getElementById('total-price');
     const totalCost = bestCost + memoryCost + storageCost + deliveryCost;
     totalPrice.innerText = totalCost;
-
     //bonus Part-1(Display Total Cost)
     const displayTotalCost = document.getElementById('display-total-cost');
     displayTotalCost.innerText = totalCost;
-
-
     //bonus Part-2(Applying Promo Code for 20% discount)
     promoCode = document.getElementById('promo-input-field').value;
     if (promoCode == 'stevekaku') {
@@ -62,7 +57,6 @@ function updateTotalCost(memory, storage, shippingCost) {
         const afterDiscountTotalCost = totalPrice.innerText - parseFloat(discountAmount);
         displayTotalCost.innerText = afterDiscountTotalCost;
     }
-
 }
 // addition of event handeler on memory size button
 document.getElementById('memory-size').addEventListener('click', function () {
@@ -73,7 +67,6 @@ document.getElementById('large-memory-size').addEventListener('click', function 
     getUpdateMemoryCost('16GB');
     updateTotalCost('16GB');
 });
-
 // addition of event handeler on storage size button
 document.getElementById('storage-size').addEventListener('click', function () {
     getUpdateStorageCost('256GB');
@@ -87,7 +80,6 @@ document.getElementById('large-storage-size').addEventListener('click', function
     getUpdateStorageCost('1TB');
     updateTotalCost('1TB');
 });
-
 // addition of event handeler on shipping charge button
 document.getElementById('free-shipping').addEventListener('click', function () {
     getUpdateDeliveryCost('freePayment');
@@ -96,9 +88,7 @@ document.getElementById('free-shipping').addEventListener('click', function () {
 document.getElementById('charged-shipping').addEventListener('click', function () {
     getUpdateDeliveryCost('withPayment');
     updateTotalCost('withPayment');
-
 });
-
 //addition of event handeler on promo code button
 document.getElementById('promo-code-button').addEventListener('click', function () {
 

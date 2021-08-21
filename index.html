@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac Book Pro</title>
+    <!-- external css added -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap framework added -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
@@ -14,10 +16,11 @@
 <body>
     <div class="container mt-5">
         <div class="row gx-5">
-            <div class="col-5">
+            <div class="col-lg-5 col-md-4 col-12 ">
                 <img src="images/mac.png" class="d-block w-100" alt="">
             </div>
-            <div class="col-7">
+            <div class="col-lg-7 col-md-8 col-12">
+                <!-- upper part -->
                 <div>
                     <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
                     <p>
@@ -28,26 +31,30 @@
                         Keyboard - US English
                     </p>
                 </div>
+                <!-- memory size buttons part -->
                 <div class="my-5">
                     <h5 class="fw-bold">Memory</h5>
                     <button id="memory-size" class="rounded button-design">8GB unified memory</button>
                     <button id="large-memory-size" class="rounded button-design">16GB unified memory</button>
                 </div>
+                <!-- storage size buttons part -->
                 <div class="my-5">
                     <h5 class="fw-bold">Storage</h5>
                     <button id="storage-size" class="rounded button-design">256GB SSD storage</button>
                     <button id="medium-storage-size" class="rounded button-design">512GB SSD storage</button>
                     <button id="large-storage-size" class="rounded button-design">1TB SSD storage</button>
                 </div>
+                <!-- shipping charge button part -->
                 <div class="my-5">
                     <h5 class="fw-bold">Choose your delivery option</h5>
                     <button id="free-shipping" class="rounded button-design">Friday, Aug 25 Free Prime Delivery</button>
-                    <button id="charged-shipping" class="rounded button-design">Friday, Aug 21 Delivery charge
+                    <button id="charged-shipping" class="rounded button-design">Friday, Aug 22 Delivery charge
                         $20</button>
                 </div>
 
+                <!--total price table part -->
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <table class="table">
 
                             <tbody>
@@ -75,6 +82,7 @@
                                 </tr>
                             </tfoot>
                         </table>
+                        <!-- apply promo code segment -->
                         <div>
                             <h5>Add Promo Code</h5>
                             <div class="input-group mb-3">
@@ -86,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6"></div>
+                    <div class="col-lg-6 col-md-6 col-12"></div>
                 </div>
             </div>
         </div>
@@ -95,7 +103,7 @@
             <h3 class="text-center mb-4">Total: $<span id="display-total-cost">1299</span></h3>
         </div>
     </div>
-
+    <!-- javascript added -->
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
