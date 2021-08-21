@@ -30,19 +30,20 @@
                 </div>
                 <div class="my-5">
                     <h5 class="fw-bold">Memory</h5>
-                    <button class="rounded button-design">8GB unified memory</button>
-                    <button class="rounded button-design">16GB unified memory</button>
+                    <button id="memory-size" class="rounded button-design">8GB unified memory</button>
+                    <button id="large-memory-size" class="rounded button-design">16GB unified memory</button>
                 </div>
                 <div class="my-5">
                     <h5 class="fw-bold">Storage</h5>
-                    <button class="rounded button-design">256GB SSD storage</button>
-                    <button class="rounded button-design">512GB SSD storage</button>
-                    <button class="rounded button-design">1TB SSD storage</button>
+                    <button id="storage-size" class="rounded button-design">256GB SSD storage</button>
+                    <button id="medium-storage-size" class="rounded button-design">512GB SSD storage</button>
+                    <button id="large-storage-size" class="rounded button-design">1TB SSD storage</button>
                 </div>
                 <div class="my-5">
                     <h5 class="fw-bold">Choose your delivery option</h5>
-                    <button class="rounded button-design">Friday, Aug 25 Free Prime Delivery</button>
-                    <button class="rounded button-design">Friday, Aug 21 Delivery charge $20</button>
+                    <button id="free-shipping" class="rounded button-design">Friday, Aug 25 Free Prime Delivery</button>
+                    <button id="charged-shipping" class="rounded button-design">Friday, Aug 21 Delivery charge
+                        $20</button>
                 </div>
 
                 <div class="row">
@@ -52,25 +53,25 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">Best Price</th>
-                                    <th>$1299</th>
+                                    <th>$<span id="best-price">1299</span></th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Extra Memory Cost</th>
-                                    <th>$0</th>
+                                    <th>$<span id="memory-price">0</span></th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Extra Storage Cost</th>
-                                    <th>$0</th>
+                                    <th>$<span id="storage-price">0</span></th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Delivery charge</th>
-                                    <th>$0</th>
+                                    <th>$<span id="delivery-charge">0</span></th>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <th scope="row">Total Price</th>
-                                    <th>$1299</th>
+                                    <th>$<span id="total-price">1299</span></th>
                                 </tr>
                             </tfoot>
                         </table>
