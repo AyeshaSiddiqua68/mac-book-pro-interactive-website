@@ -49,6 +49,10 @@ function updateTotalCost(memory, storage, shippingCost) {
     const totalPrice = document.getElementById('total-price');
     const totalCost = bestCost + memoryCost + storageCost + deliveryCost;
     totalPrice.innerText = totalCost;
+
+    //bonus Part-1(Display Total Cost)
+    const displayTotalCost = document.getElementById('display-total-cost');
+    displayTotalCost.innerText = totalCost;
 }
 // addition of event handeler on memory size button
 document.getElementById('memory-size').addEventListener('click', function () {
