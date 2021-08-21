@@ -53,6 +53,16 @@ function updateTotalCost(memory, storage, shippingCost) {
     //bonus Part-1(Display Total Cost)
     const displayTotalCost = document.getElementById('display-total-cost');
     displayTotalCost.innerText = totalCost;
+
+    document.getElementById('promo-code-button').addEventListener('click', function () {
+        const promoCodeInput = document.getElementById('promo-code-input').value;
+        if (promoCodeInput == 'stevekaku') {
+            const displayTotalCost = document.getElementById('display-total-cost');
+            displayTotalCost.innerText = parseFloat(totalCost - (totalCost * .2));
+
+        }
+
+    })
 }
 // addition of event handeler on memory size button
 document.getElementById('memory-size').addEventListener('click', function () {
@@ -88,5 +98,7 @@ document.getElementById('charged-shipping').addEventListener('click', function (
     updateTotalCost('withPayment');
 
 });
+
+
 
 
